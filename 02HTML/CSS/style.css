@@ -25,9 +25,10 @@ nav, section, footer, aside, article{
 }
 
 article, aside{
+    align-content: center;
     width: 40%;
-    display: inline-block;
-    height: 300px;
+    display:inline-block;
+    height: auto;
     background-color: blanchedalmond;
 }
 
