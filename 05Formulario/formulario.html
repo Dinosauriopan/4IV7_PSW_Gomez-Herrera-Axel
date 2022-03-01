@@ -9,22 +9,32 @@
     
 </head>
 <body>
-    <form method="GET" name="formulario" 
+    <h1>GET: </h1> Este metodo se encarga de enviar la informacion
+     por la url o salida estandar del navegador, esto propician que 
+     la seguridad de la informacion no exista, ya que es visible
+    <br>
+    <h1>POST: </h1> Este metodo se encarga de enviar informacion
+     por la url de forma oculta, lo que nos ofrece cierto 
+     nivel de seguridad en el manejo de los datos
+    <br>
+    <form method="get" name="formulario" 
     onsubmit="return validar(this)" action="formulario.html">
-        Nombre:
         <br>
-        <input type="text" name="nombre" size="20">
+        <label>Nombre:</label>
         <br>
-        Edad:
+        <input type="text" name="nombre" id="nombre" size="20">
         <br>
-        <input type="text" name="edad" size="2">
+        <label>Edad:</label>
         <br>
-        Email:
+        <input type="text" name="edad" id="edad" size="2">
         <br>
-        <input type="text" name="email" id="30">
+        <label>Email:</label>
+        <br>
+        <input type="text" name="email" id="email" size="30">
         <br>
         <br>
         <input type="submit" value="Enviar datos" name="enviar">
+        <br><br>
         <input type="reset" value="Borrar formualrio" name="borrar">
     </form>
 </body>
