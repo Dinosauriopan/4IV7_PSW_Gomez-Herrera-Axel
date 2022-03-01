@@ -1,98 +1,88 @@
-    /*
-    JavaScript es un lenguaje que posee un paradigma orientado a objetos y a funciones, por cual motivo no presenta una particularidad la cual es:
-
-    No tipado
-
-    no hay variables int,etc.
-
-    TODO ES VAR --> variable
-
-    de acuerdo al estnadar ES6 se manejan 3 tipos de variables
-
-    VAR
-    LET --> es una variable de tipo "protected"
-    CONST
-
-    */
+/*
+Javascript es un lenguaje que posee un paradigma
+orientado a objetos y a funciones, por tal motivo
+presenta una particularidad la cual es:
+NO TIPADO
+no existe int, float, string, ni char, ni nada
+TODO ES VAR -> variable
+De acuerdo al estandar ES6 se manejan 3 tipos
+de variables
+VAR
+LET   es una variable de tipo "protected"
+CONST   
+*/
 
 function validar(formulario){
-
-    /* 
-    Queremos validar que se escriban mas de 5 caracteres en el campo
-    de nombre
-    */
+    //obtener los datos y discriminar a los que tiene 3 letras
     if(formulario.nombre.value.length < 5){
-        alert("Por favor escribe más de 5 caracteres en el campo nombre");
-        formulario.nombre.focus();
-    return false;
-    }
-
-    /*
-    Validar que acepte unicamente letras
-    */
-
-    var checkOk = "QWERTYUIOPASDFGHJKLÑZXCVBNM" + "qwertyuiopasdfghjklñzxcvbnm";
-
-    var checkStr = formulario.nombre.value;
-
-    var allValid = true;
-
-    for(var i = 0; i < checkStr.length; i++){
-        var ch = checkStr.charAt(i);
-        for(var j = 0; j < checkOk.length; j++){
-            if(ch == checkOk.charAt(j)){
-                break;
-            }
-        }
-        if(j == checkOk.length){
-            allValid = false;
-            break;
-        } 
-    }
-
-    if(!allValid){
-        alert("Escribe solo letras en el campo Nombre");
+        alert("Escriba por lo menos 5 caracteres en el campo Nombre");
         formulario.nombre.focus();
         return false;
     }
 
-    //Validar solo numeros
+    var checkOK = "QWERTUIOPASDFGHJKLÑZXCVBNM"
+    + "qwertyuiopasdfghjklñzxcvbnm";
 
-    var checkOk = "1234567890";
+    var checkStr = formulario.nombre.value;
 
-    var checkStr = formulario.edad.value;
-
-    var allValid = true;
+    var todoesvalido = true;
 
     for(var i = 0; i < checkStr.length; i++){
         var ch = checkStr.charAt(i);
-        for(var j = 0; j < checkOk.length; j++){
-            if(ch == checkOk.charAt(j)){
+        for(var j = 0; j < checkOK.length; j++){
+            if(ch == checkOK.charAt(j)){
                 break;
             }
+            
         }
-        if(j == checkOk.length){
-            allValid = false;
+        if(j == checkOK.length){
+            todoesvalido = false;
             break;
-        } 
+        }
     }
 
-    if(!allValid){
-        alert("Escribe solo numeros en Edad");
+    if(!todoesvalido){
+        alert("Escriba unicamente letras en el campo Nombre");
+        formulario.nombre.focus();
+        return false;
+    }
+
+
+    var checkOK = "0123456789";
+
+    var checkStr = formulario.edad.value;
+
+    var todoesvalido = true;
+
+    for(var i = 0; i < checkStr.length; i++){
+        var ch = checkStr.charAt(i);
+        for(var j = 0; j < checkOK.length; j++){
+            if(ch == checkOK.charAt(j)){
+                break;
+            }
+            
+        }
+        if(j == checkOK.length){
+            todoesvalido = false;
+            break;
+        }
+    }
+
+    if(!todoesvalido){
+        alert("Escriba unicamente numeros en el campo Edad");
         formulario.edad.focus();
         return false;
     }
 
-    //validar correo electronico
-    //Expresiones regulares, poder diferenciar una cadena de caracteres
-    // y definir que caracteres son validos de acuerdo a una condicion
-
     var txt = formulario.email.value;
 
-    //Expresion regular
-
+    //creo mi expresion regular
+    //algo@algo   o algo@algo.algo
     var b = /^[^@\s]+[^@\.\s]+(\.[^@\.\s]+)+$/;
 
-    alert("Email " + (b.test(txt)?" ":"no ") + "valido");
-    return b.test(txt);
+    alert("Email " + (b.test(txt)?" ":" no ")+" valido");
+
+    return b.test;
+
+
 }
