@@ -1,9 +1,26 @@
+    /*
+    JavaScript es un lenguaje que posee un paradigma orientado a objetos y a funciones, por cual motivo no presenta una particularidad la cual es:
+
+    No tipado
+
+    no hay variables int,etc.
+
+    TODO ES VAR --> variable
+
+    de acuerdo al estnadar ES6 se manejan 3 tipos de variables
+
+    VAR
+    LET --> es una variable de tipo "protected"
+    CONST
+
+    */
+
 function validar(formulario){
+
     /* 
     Queremos validar que se escriban mas de 5 caracteres en el campo
     de nombre
     */
- 
     if(formulario.nombre.value.length < 5){
         alert("Por favor escribe más de 5 caracteres en el campo nombre");
         formulario.nombre.focus();
@@ -22,14 +39,15 @@ function validar(formulario){
 
     for(var i = 0; i < checkStr.length; i++){
         var ch = checkStr.charAt(i);
-        for(var j = 0; j < checkOk.length; j++)
-        if(ch == checkOk.charAt(j));
-            break;
-        
+        for(var j = 0; j < checkOk.length; j++){
+            if(ch == checkOk.charAt(j)){
+                break;
+            }
+        }
         if(j == checkOk.length){
             allValid = false;
             break;
-        }
+        } 
     }
 
     if(!allValid){
@@ -48,14 +66,15 @@ function validar(formulario){
 
     for(var i = 0; i < checkStr.length; i++){
         var ch = checkStr.charAt(i);
-        for(var j = 0; j < checkOk.length; j++)
-        if(ch == checkOk.charAt(j));
-            break;
-        
+        for(var j = 0; j < checkOk.length; j++){
+            if(ch == checkOk.charAt(j)){
+                break;
+            }
+        }
         if(j == checkOk.length){
             allValid = false;
             break;
-        }
+        } 
     }
 
     if(!allValid){
@@ -72,8 +91,8 @@ function validar(formulario){
 
     //Expresion regular
 
-    var b = /^[^@\s]]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
+    var b = /^[^@\s]+[^@\.\s]+(\.[^@\.\s]+)+$/;
 
-    alert("Email " + (b.test(txt)?"":"no ") + "valido");
+    alert("Email " + (b.test(txt)?" ":"no ") + "valido");
     return b.test(txt);
 }
