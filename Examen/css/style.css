@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../image/fondo.jpg);
+    background-size:cover;
+    align-items: center;
+    flex-direction: column;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.bonito{
+    border: 4px solid rgb(255, 255, 255);
+    margin: 1rem;
+    background-color: rgba(82, 169, 255, 0.822);
+}
+
+.tabla{
+    margin: 1rem;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    text-align: center;
+    border-top: 1rem;
+    background-color: rgba(63, 223, 196, 0.808);
+    border: 4px solid black;
+}
+
+.tabla label{
+    color: rgb(255, 255, 255);
+}
+
+.tabla tr{
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+.article{
+    border: 4px solid #000000;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.datos{
+    border: 4px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(255, 0, 0, 0.747);
+    color: white;
+}
+
+.link{
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+.titulo{
+    border: 4px solid black;
+    background-color: rgba(149, 50, 185, 0.795);
+}
