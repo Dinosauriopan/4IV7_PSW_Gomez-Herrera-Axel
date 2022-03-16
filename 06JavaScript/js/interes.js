@@ -11,16 +11,29 @@ function validarn(e){
 }
 
 function interes(){
+
+    var valor = document.formulario.cantidad.value;
+    var meses = document.formulario.meses.value;
+    var capitaln =parseInt(valor);
+    var mesesn = parseInt(meses);
+    
+    while (mesesn > 48){
+        alert("El maximo de meses que puede invertir es de 48")
+        return false;        
+    }
+
+    var total = Math.pow(1.02, mesesn)*capitaln
+
+    /*
     var valor =  document.formulario.cantidad.value;
     var resul = parseInt(valor);
     var interes = resul*0.037;
-    var total = interes + resul;
+    var total = interes + resul;*/
     
-    document.formulario.sueldoI.value = "$" + total;
+    document.formulario.totalI.value = "$" + total;
 }
+
 function borrard(){
-
-    document.formulario.cantidad.value="";
-    document.formulario.cantidad.value="";
-
+    document.formulario.cantidad.value = "";
+    document.formulario.meses.value = "";
 }
