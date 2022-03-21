@@ -108,7 +108,7 @@
     
                 </td>
                 <td>
-                    <input type="button" value="Calcular Ganancia"
+                    <input type="button" value="Calcular Sueldo"
                     name="enviar" onclick="comision()">
                 </td>
             </tr>
@@ -134,25 +134,15 @@
     <br>
     <h1>PROBLEMA 3</h1>
     <form name="formulario3" method="post" action="">
-        <label>Formulario para el calculo de inversión de capital
-            al 2% anual</label>
+        <label>Formulario para saber cuanto pagará un cliente con su descuento</label>
         <br>
         <table>
             <tr>
                 <td>
-                    Introduce la cantidad que deseas invertir: 
+                    Introduce el total a pagar:
                 </td>
                 <td>
-                    <input type="text" name="cantidad"
-                    onkeypress="return validarn(event)">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Introduce el número de meses que quieras invertir: 
-                </td>
-                <td>
-                    <input type="text" name="meses"
+                    <input type="text" name="pago"
                     onkeypress="return validarn(event)">
                 </td>
             </tr>
@@ -161,16 +151,16 @@
     
                 </td>
                 <td>
-                    <input type="button" value="Calcular Ganancia"
-                    name="enviar" onclick="interes()">
+                    <input type="button" value="Aplicar descuento"
+                    name="enviar" onclick="aplicar_descuento()">
                 </td>
             </tr>
             <tr>
                 <td>
-                   Su cantidad final será de:
+                   La cantidad a pagar es de:
                 </td>
                 <td>
-                    <input type="text" name="totalI"
+                    <input type="text" name="pagoDescuento"
                     readonly="readonly" class="input_text">
                 </td>
             </tr>
@@ -178,7 +168,7 @@
                 <td></td>
                 <td>
                     <input type="button" value="Borrar datos"
-                    name="borrar" onclick="borrard()">
+                    name="borrar" onclick="borrar3()">
                 </td>
             </tr>
         </table>
@@ -351,5 +341,6 @@
     <div class="link"><a href="../index.html">Regresar al menu principal</a></div>
     <script src="js/interes.js"></script>
     <script src="js/comision.js"></script>
+    <script src="js/descuento.js"></script>
 </body>
 </html>
