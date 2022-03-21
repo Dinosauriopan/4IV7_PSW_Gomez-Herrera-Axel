@@ -259,43 +259,52 @@
     <h1>PROBLEMA 5</h1>
     <form name="formulario5" method="post" action="">
 
-        <label>Formulario para el calculo de inversión de capital
-            al 2% anual</label>
+        <label>Formulario para calcular el porcentaje de H y M en un grupo.</label>
+        <br>
+        <label>(No se si a esto se referia con solo meter H y M)</label>
         <br>
         <table>
             <tr>
                 <td>
-                    Introduce la cantidad que deseas invertir: 
+                    ¿Cuántos hombres hay en su grupo? (H): 
                 </td>
                 <td>
-                    <input type="text" name="cantidad"
+                    <input type="text" name="hombres"
                     onkeypress="return validarn(event)">
                 </td>
             </tr>
             <tr>
                 <td>
-                    Introduce el número de meses que quieras invertir: 
+                    ¿Cuántas mujeres hay en su grupo? (M):  
                 </td>
                 <td>
-                    <input type="text" name="meses"
+                    <input type="text" name="mujeres"
                     onkeypress="return validarn(event)">
                 </td>
             </tr>
             <tr>
-                <td>
-    
+                <td>    
                 </td>
                 <td>
-                    <input type="button" value="Calcular Ganancia"
-                    name="enviar" onclick="interes()">
+                    <input type="button" value="Sacar porcentaje"
+                    name="enviar" onclick="porcentaje()">
                 </td>
             </tr>
             <tr>
                 <td>
-                   Su cantidad final será de:
+                   Porcentaje de H: 
                 </td>
                 <td>
-                    <input type="text" name="totalI"
+                    <input type="text" name="porcentajeH"
+                    readonly="readonly" class="input_text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Porcentaje de M: 
+                </td>
+                <td>
+                    <input type="text" name="porcentajeM"
                     readonly="readonly" class="input_text">
                 </td>
             </tr>
@@ -303,7 +312,7 @@
                 <td></td>
                 <td>
                     <input type="button" value="Borrar datos"
-                    name="borrar" onclick="borrard()">
+                    name="borrar" onclick="borrar5()">
                 </td>
             </tr>
         </table>
@@ -369,5 +378,6 @@
     <script src="js/comision.js"></script>
     <script src="js/descuento.js"></script>
     <script src="js/calificacion.js"></script>
+    <script src="js/porcentaje.js"></script>
 </body>
 </html>
