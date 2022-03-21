@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="cuerpo">
     <h1>PROBLEMA 1</h1>
     <form name="formulario" method="post" action="">
 
@@ -322,26 +323,61 @@
     <h1>PROBLEMA 6</h1>
     <form name="formulario6" method="post" action="">
 
-        <label>Formulario para el calculo de inversión de capital
-            al 2% anual</label>
+        <label>Formulario para calcular la edad de alguien.</label>
         <br>
         <table>
             <tr>
                 <td>
-                    Introduce la cantidad que deseas invertir: 
+                    Introduce el día actual:
                 </td>
                 <td>
-                    <input type="text" name="cantidad"
-                    onkeypress="return validarn(event)">
+                    <input type="text" name="diaA" maxlength="2" size="2"
+                    onkeypress="return validare(event)">
                 </td>
             </tr>
             <tr>
                 <td>
-                    Introduce el número de meses que quieras invertir: 
+                    Introduce el mes actual:  
                 </td>
                 <td>
-                    <input type="text" name="meses"
-                    onkeypress="return validarn(event)">
+                    <input type="text" name="mesA" maxlength="2" size="2"
+                    onkeypress="return validare(event)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Introduce el año actual:  
+                </td>
+                <td>
+                    <input type="text" name="anoA" maxlength="4" size="4"
+                    onkeypress="return validare(event)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Introduce el día de tu nacimiento:
+                </td>
+                <td>
+                    <input type="text" name="diaN" maxlength="2" size="2"
+                    onkeypress="return validare(event)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Introduce el mes de tu nacimiento:  
+                </td>
+                <td>
+                    <input type="text" name="mesN" maxlength="2" size="2"
+                    onkeypress="return validare(event)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Introduce el año de tu nacimiento:  
+                </td>
+                <td>
+                    <input type="text" name="anoN" maxlength="4" size="4"
+                    onkeypress="return validare(event)">
                 </td>
             </tr>
             <tr>
@@ -349,16 +385,16 @@
     
                 </td>
                 <td>
-                    <input type="button" value="Calcular Ganancia"
-                    name="enviar" onclick="interes()">
+                    <input type="button" value="Calcular edad"
+                    name="enviar" onclick="edad()">
                 </td>
             </tr>
             <tr>
                 <td>
-                   Su cantidad final será de:
+                   Su edad es de :
                 </td>
                 <td>
-                    <input type="text" name="totalI"
+                    <input type="text" name="edad_calculada"
                     readonly="readonly" class="input_text">
                 </td>
             </tr>
@@ -366,7 +402,7 @@
                 <td></td>
                 <td>
                     <input type="button" value="Borrar datos"
-                    name="borrar" onclick="borrard()">
+                    name="borrar" onclick="borrar6()">
                 </td>
             </tr>
         </table>
@@ -374,10 +410,12 @@
 
     <br>
     <div class="link"><a href="../index.html">Regresar al menu principal</a></div>
+    </div>
     <script src="js/interes.js"></script>
     <script src="js/comision.js"></script>
     <script src="js/descuento.js"></script>
     <script src="js/calificacion.js"></script>
     <script src="js/porcentaje.js"></script>
+    <script src="js/edad.js"></script>
 </body>
 </html>
