@@ -179,25 +179,51 @@
     <h1>PROBLEMA 4</h1>
     <form name="formulario4" method="post" action="">
 
-        <label>Formulario para el calculo de inversión de capital
-            al 2% anual</label>
+        <label>Formulario para obtener la caificación final de una materia.</label>
         <br>
         <table>
             <tr>
                 <td>
-                    Introduce la cantidad que deseas invertir: 
+                    Introduce la calificación del primer parcial.
                 </td>
                 <td>
-                    <input type="text" name="cantidad"
+                    <input type="text" name="parcial1"
                     onkeypress="return validarn(event)">
                 </td>
             </tr>
             <tr>
                 <td>
-                    Introduce el número de meses que quieras invertir: 
+                    Introduce la calificación del segundo parcial.
                 </td>
                 <td>
-                    <input type="text" name="meses"
+                    <input type="text" name="parcial2"
+                    onkeypress="return validarn(event)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Introduce la terera calificación del tercer parcial.
+                </td>
+                <td>
+                    <input type="text" name="parcial3"
+                    onkeypress="return validarn(event)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Introduce la calificación del examen final.
+                </td>
+                <td>
+                    <input type="text" name="examenF"
+                    onkeypress="return validarn(event)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Introduce la calificación del trabajo final.
+                </td>
+                <td>
+                    <input type="text" name="trabajoF"
                     onkeypress="return validarn(event)">
                 </td>
             </tr>
@@ -206,16 +232,16 @@
     
                 </td>
                 <td>
-                    <input type="button" value="Calcular Ganancia"
-                    name="enviar" onclick="interes()">
+                    <input type="button" value="Calcular calificacion final"
+                    name="enviar" onclick="calificacion()">
                 </td>
             </tr>
             <tr>
                 <td>
-                   Su cantidad final será de:
+                   Su calificación final es de:
                 </td>
                 <td>
-                    <input type="text" name="totalI"
+                    <input type="text" name="calificacionF"
                     readonly="readonly" class="input_text">
                 </td>
             </tr>
@@ -223,7 +249,7 @@
                 <td></td>
                 <td>
                     <input type="button" value="Borrar datos"
-                    name="borrar" onclick="borrard()">
+                    name="borrar" onclick="borrar4()">
                 </td>
             </tr>
         </table>
@@ -342,5 +368,6 @@
     <script src="js/interes.js"></script>
     <script src="js/comision.js"></script>
     <script src="js/descuento.js"></script>
+    <script src="js/calificacion.js"></script>
 </body>
 </html>
