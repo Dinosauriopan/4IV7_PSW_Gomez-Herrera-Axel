@@ -31,8 +31,47 @@ function problema1(){
 }
 
 //problema 2
+
+//validar solo numeros
+function validarnn(e){
+    var teclado = (document.all)? e.keyCode : e.which;
+    if(teclado == 8) return true;
+    var patron = /[0-9\d .]/;
+    var codigo = String.fromCharCode(teclado);
+    return patron.test(codigo);
+}
+
 function problema2(){
 
+    //X
+    var x1 = document.querySelector('#p2-x1').value;
+    var x2 = document.querySelector('#p2-x2').value;
+    var x3 = document.querySelector('#p2-x3').value;
+    var x4 = document.querySelector('#p2-x4').value;
+    var x5 = document.querySelector('#p2-x5').value;
+
+    //Y
+    var y1 = document.querySelector('#p2-y1').value;
+    var y2 = document.querySelector('#p2-y2').value;
+    var y3 = document.querySelector('#p2-y3').value;
+    var y4 = document.querySelector('#p2-y4').value;
+    var y5 = document.querySelector('#p2-y5').value;
+
+    //vectores
+    var vectoresX = [x1, x2, x3, x4, x5];
+    var vectoresY = [y1, y2, y3, y4, y5];
+
+    //invertir los vectores, como dijo en clase.
+    vectoresY = vectoresY.reverse();
+    vectoresX = vectoresX.reverse();
+
+    var resultado = 0;
+    for(i = 0; i < vectoresY.length; i++){
+        resultado = resultado + (vectoresX[i]*vectoresY[i]);
+    }
+
+    document.querySelector('#p2-output').textContent = "El producto escalar mínimo es de: " + resultado;
+    
 }
 
 //problema 3
