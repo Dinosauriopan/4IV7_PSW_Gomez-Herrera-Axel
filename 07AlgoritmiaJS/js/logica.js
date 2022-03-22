@@ -1,4 +1,39 @@
+//problema 1
 
+//validacion de solo letras
+function validarn(e){
+    var teclado = (document.all)? e.keyCode : e.which;
+    //El 32 es para aceptar el espacio segun encontre.
+    if(teclado == 32) return true;
+    var patron = /[a b c d e f g h i j k l m n ñ o p q r s t u v w x y z A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z]/;
+    var codigo = String.fromCharCode(teclado);
+    return patron.test(codigo);
+}
+
+function problema1(){
+
+    //obtener la cadena
+    var p1_input = document.querySelector('#p1-input').value;
+    //poner la cadena en reversa y que puedan estar separadas por un espacio
+    var p1_palabras = p1_input.split(' ').reverse();
+    
+    //Darme cuenta que las palabras con espacio se les ponen comas automaticamente.
+    var p1_espacios = ' ';
+
+    p1_palabras.forEach(function(palabra, i){
+        if(i != p1_palabras.length || i != 0 ){
+            p1_espacios += ' ';
+            p1_espacios += palabra;
+        }
+    })
+
+    document.querySelector('#p1-output').textContent = p1_espacios;
+}
+
+//problema 2
+function problema2(){
+
+}
 
 //problema 3
 function problema3(){
