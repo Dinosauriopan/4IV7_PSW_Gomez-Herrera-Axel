@@ -14,6 +14,7 @@
         <title>Borrar datos</title>
     </head>
     <body>
+        <div class="titulo"><h1>Borrar docente </h1></div>
         <% 
         //esa codigo java
         Connection con = null;

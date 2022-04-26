@@ -15,7 +15,7 @@
         <title>Editar docente</title>
     </head>
     <body>
-        
+        <div class="titulo"><h1>EDITAR DOCENTE</h1></div>
         <form name="editar" action="actualizardocente.jsp" method="post" >
             
 

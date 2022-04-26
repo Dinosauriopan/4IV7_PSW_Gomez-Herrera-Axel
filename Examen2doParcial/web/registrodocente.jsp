@@ -15,6 +15,7 @@
         <title>Registro del docente</title>
     </head>
     <body>
+        <div class="titulo"><h1>REGISTRO DE DOCENTE</h1></div>
         <% 
         //esa codigo java
         Connection con = null;

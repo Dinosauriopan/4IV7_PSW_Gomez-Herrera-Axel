@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/stylejs.css">
     </head>
     <body>
-        
+        <div class="titulo"><h1>CONSULTA DE DOCENTE</h1></div>
         <table border="2">
             <thead>
                 <tr>

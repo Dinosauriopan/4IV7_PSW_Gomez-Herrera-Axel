@@ -15,7 +15,7 @@
         <title>Editar estado</title>
     </head>
     <body>
-        
+        <div class="titulo"><h1>EDITAR ESTADO</h1></div>
         <form name="editar" action="actualizarestado.jsp" method="post" >       
         <% 
         //esa codigo java

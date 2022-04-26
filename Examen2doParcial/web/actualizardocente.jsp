@@ -15,6 +15,7 @@
         <title>Actualizar datos docente</title>
     </head>
     <body>
+        <div class="titulo"><h1>Actualizar Docente</h1></div>
         <% 
         //esa codigo java
         Connection con = null;

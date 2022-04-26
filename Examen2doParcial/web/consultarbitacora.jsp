@@ -15,6 +15,7 @@
         <title>BITACORA DE PROBLEMAS</title>
     </head>
     <body>
+        <div class="titulo"><h1>CONSULTA DE BITACORA</h1></div>
         <table border="2">
             <thead>
                 <tr>
